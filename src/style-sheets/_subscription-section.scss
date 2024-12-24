@@ -1,0 +1,69 @@
+//Subscription-section
+
+.subscription-section {
+  padding-top: 57px;
+  padding-bottom: 95px;
+  margin: 0 2.427vw auto;
+  border-radius: 16px;
+  padding-left: 5px;
+  padding-right: 5px;
+  @media screen and (min-width: 1440px) {
+    margin: 0 14.427vw auto;
+    padding-left: 168px;
+    padding-right: 168px;
+  }
+  background-color: rgba(250, 250, 250, 1);
+  h3 {
+    padding-bottom: 17px;
+    color: rgba(33, 37, 40, 1);
+    @media screen and (min-width: 1440px) {
+      font-size: 32px;
+    }
+    @media screen and (min-width: 1920px) {
+      font-size: 50px;
+    }
+  }
+  p {
+    color: rgba(144, 144, 144, 1);
+    padding-bottom: 31px;
+  }
+  input {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 37px;
+    width: 75% !important;
+    font-size: 16px;
+    @media screen and (min-width: 768px) {
+      width: 34% !important;
+    }
+    @media screen and (min-width: 1240px) {
+      width: 21.667vw !important;
+    }
+    @media screen and (min-width: 1920px) {
+      padding-top: 24px;
+      padding-bottom: 22px;
+      padding-left: 37px;
+      font-size: 19px;
+    }
+  }
+  div {
+    column-gap: 30px;
+    row-gap: 30px;
+    > button {
+      padding-top: 9px;
+      padding-bottom: 9px;
+      text-align: center;
+      width: 169px !important;
+      background-color: rgba(111, 119, 241, 1);
+      font-size: 18px;
+      @media screen and (min-width: 1920px) {
+        padding-top: 22px;
+        padding-bottom: 21.84px;
+        font-size: 20.55px;
+      }
+    }
+    button:hover {
+      background-color: rgb(137, 143, 233);
+    }
+  }
+}

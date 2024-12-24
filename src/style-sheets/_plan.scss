@@ -1,0 +1,99 @@
+//plans-section
+.plans-section {
+  padding-top: 53px;
+  padding-bottom: 66px;
+  background-color: #fafafa;
+  > h3 {
+    @media screen and (min-width: 1024px) {
+      font-size: 55px;
+    }
+  }
+  > p {
+    padding-bottom: 56px;
+    color: #828282;
+    font-size: 17px;
+    @media screen and (min-width: 1024px) {
+      padding-bottom: 86px;
+    }
+  }
+}
+.plan-section-card {
+  padding: 30px 10px;
+  border: none !important;
+  @media screen and (min-width: 768px) {
+    padding: 65px 58px 79px 58px;
+  }
+  h6 {
+    margin-bottom: 0px;
+    font-size: 22px;
+    color: #6f77f1;
+    padding-bottom: 20px;
+    @media screen and (min-width: 768px) {
+      padding-bottom: 24px;
+    }
+  }
+  p {
+    margin-bottom: 0px;
+    font-size: 30px;
+    padding-bottom: 25px;
+    @media screen and (min-width: 768px) {
+      font-size: 49px;
+      padding-bottom: 35px;
+    }
+  }
+  sub {
+    font-size: 15px;
+  }
+  sup {
+    font-size: 16px;
+   vertical-align: super;
+  }
+  div {
+    p {
+      font-size: 17px !important;
+      color: #828282;
+      padding-bottom: 10px;
+    }
+  }
+}
+.plan-section-cards {
+  column-gap: 22px;
+  row-gap: 22px;
+}
+.plan-button {
+  margin: 42px auto;
+  margin-bottom: 0px;
+  padding: 11px 0px !important;
+  width: 126px !important;
+  border: 1px solid rgba(33, 37, 40, 1) !important;
+  border-radius: 2px !important;
+}
+.plan-section-card:hover {
+  background: url(./../images/content/nuvosa-images/plans-section/plans-hover.png) no-repeat center center;
+  scale: 1.08;
+  h6,
+  div,
+  p {
+    color: #ffffff;
+  }
+  a {
+    background-color: #fad725 !important;
+    border: none !important;
+  }
+}
+.orange-design {
+  display: none;
+  @media screen and (min-width: 1920px) {
+    display: inline;
+    left: 1712px;
+    top: 700px;
+  }
+}
+.purple-design {
+  display: none;
+  @media screen and (min-width: 1920px) {
+    display: inline;
+    left: 212px;
+    top: 146px;
+  }
+}

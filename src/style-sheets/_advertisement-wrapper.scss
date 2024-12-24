@@ -1,0 +1,78 @@
+//advertisement wrapper
+.advertisement-wrapper {
+  background-color: rgba(250, 250, 250, 1) !important;
+  padding: 25px 10px;
+  text-align: center;
+  column-gap: 30px;
+  background-image: url(../images/content/nuvosa-images/advertisement-wrapper/curve.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  object-fit: fill;
+  @media screen and (min-width: 768px) {
+    text-align: left;
+    margin-top: 50px;
+    border-radius: 4px;
+  }
+  @media screen and (min-width: 1024px) {
+    padding-left: 38px;
+  }
+  @media screen and (min-width: 1440px) {
+    padding-left: 78px;
+    justify-content: center;
+  }
+  @media screen and (min-width: 1920px) {
+    margin-top: 244px;
+    padding-top: 102px;
+    padding-bottom: 100px;
+  }
+  div {
+    border: none !important;
+    background-color: transparent;
+    h5 {
+      font-size: 22px;
+      @media screen and (min-width: 1024px) {
+        font-size: 32px;
+      }
+      @media screen and (min-width: 1440px) {
+        width: 543px;
+        font-size: 55px;
+      }
+    }
+    span {
+      color: rgba(111, 119, 241, 1);
+    }
+    p {
+      font-size: 17px;
+      color: $box-paragraph-color;
+      @media screen and (min-width: 1440px) {
+        width: 601px;
+        font-size: 17px;
+      }
+    }
+    a {
+      width: 150px;
+      margin: auto;
+      background-color: #fad725;
+      border: none;
+      color: black;
+      font-size: 16px;
+      border-radius: 2px;
+      @media screen and (min-width: 768px) {
+        margin: unset;
+        width: 214px;
+        padding: 20px 40px;       
+      }
+      @media screen and (min-width: 1440px) {       
+        font-size: 24px;
+      }
+    }
+    a:hover {
+      background-color: #f7e172 !important;
+      color: black;
+    }
+    img {
+      align-self: center !important;
+    }
+  }
+}

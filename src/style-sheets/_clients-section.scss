@@ -1,0 +1,94 @@
+//clients-section
+.clients-section {
+  margin-bottom: 100px;
+  padding-left: 10px;
+
+  @media screen and (min-width: 1024px) {
+    padding-left: 0px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 249px;
+  }
+
+  > p {
+    color: #828282;
+    padding-bottom: 46px;
+
+    @media screen and (min-width: 1440px) {
+      font-size: 17px;
+      width: 501px;
+      margin: auto;
+    }
+  }
+
+  > h3 {
+    padding-bottom: 5px;
+
+    @media screen and (min-width: 1440px) {
+      font-size: 32px;
+    }
+    @media screen and (min-width: 1920px) {
+      font-size: 55px;
+    }
+  }
+}
+
+.client-image {
+  width: 50px !important;
+  padding-bottom: 10px;
+}
+
+.client-card {
+  width: 300px !important;
+  padding-top: 41px;
+  padding-bottom: 33px;
+  border-radius: 0px !important;
+  border: 1px solid #efefef !important;
+
+  @media screen and (min-width: 1024px) {
+    width: 569px !important;
+    padding-left: 48px;
+    padding-right: 49px;
+  }
+
+  > p {
+    font-size: 17px;
+    color: #828282;
+  }
+
+  > h5 {
+    font-size: 12px;
+    padding-bottom: 5px;
+  }
+
+  > h6 {
+    font-size: 12px;
+    color: #828282;
+  }
+}
+
+.quote {
+  width: 107px !important;
+  top: 5px;
+  left: 10px;
+}
+
+.client-card:hover {
+  border: none !important;
+  box-shadow: 0px 34px 50px -17px rgba(2, 22, 5, 0.1);
+
+  > p {
+    z-index: +1;
+  }
+}
+
+.clients-orange-design {
+  display: block;
+  @media screen and (min-width: 1440px) {
+    display: inline;
+    width: 15px !important;
+    top: -13px;
+    left: -427px;
+  }
+}

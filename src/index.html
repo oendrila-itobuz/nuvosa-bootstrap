@@ -1,306 +1,768 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <title>Webpack Boilerplate Starter Template</title>
-    <meta name="description" content="Simple starter webpack 5 project template boilerplate supporting SASS/PostCSS, Babel ES7, browser syncing, code linting. Easy project setup having multiple features and developer friendly tools.">
-    <meta name="keywords" content="webpack, webpack-configuration, template, boilerplate, setup, html, css, sass, javascript">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Plamen Nikolov, WeAreAthlon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuvosa Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+    />
   </head>
+
   <body>
-    <header>
-      <h1>Webpack 5 Template Boilerplate</h1>
-      <small>Maintained by <a href="https://www.weareathlon.com/" target="_blank" rel="noopener">WeAreAthlon</a>. Source code availalbe on <a href="https://github.com/WeAreAthlon/frontend-webpack-boilerplate/" target="_blank"><img src="images/content/github.png" alt="GitHub logo"> GitHub</a>.</small>
-      <div class="badges">
-        <a href="https://github.com/WeAreAthlon/frontend-webpack-boilerplate/" target="_blank" rel="noopener"><img src="https://img.shields.io/maintenance/yes/2024?logo=github" alt="Maintenance"></a>
-        <a href="https://github.com/WeAreAthlon/frontend-webpack-boilerplate/actions" target="_blank" rel="noopener"><img src="https://github.com/WeAreAthlon/frontend-webpack-boilerplate/actions/workflows/deploy.yml/badge.svg" alt="Build Status"></a>
-        <a href="https://webpack.js.org" target="_blank" rel="noopener"><img src="https://img.shields.io/badge/webpack-v5.90.3-green?logo=webpack" alt="Current Webpack Version"></a>
-        <a href="https://snyk.io/advisor/npm-package/@weareathlon/frontend-webpack-boilerplate" target="_blank" rel="noopener"><img src="https://snyk.io/advisor/npm-package/@weareathlon/frontend-webpack-boilerplate/badge.svg" alt="Snyk.io package health badge"></a>
-        <br>
-        <a href="https://github.com/WeAreAthlon/frontend-webpack-boilerplate/issues" target="_blank" rel="noopener"><img src="https://img.shields.io/github/issues-raw/WeAreAthlon/frontend-webpack-boilerplate" alt="GitHub Issues"></a>
-        <a href="https://snyk.io/test/github/WeAreAthlon/frontend-webpack-boilerplate?targetFile=package.json" target="_blank" rel="noopener"><img src="https://snyk.io/test/github/WeAreAthlon/frontend-webpack-boilerplate/badge.svg?targetFile=package.json" alt="Known Vulnerabilities"></a>
-        <a href="https://www.npmjs.com/package/@weareathlon/frontend-webpack-boilerplate" target="_blank" rel="noopener"><img src="https://img.shields.io/npm/dm/@weareathlon/frontend-webpack-boilerplate" alt="npm"></a>
-        <a href="https://github.com/WeAreAthlon/frontend-webpack-boilerplate/blob/master/LICENSE" target="_blank" rel="noopener"><img src="https://img.shields.io/github/license/WeAreAthlon/frontend-webpack-boilerplate" alt="GitHub License"></a>
+    <!-- navSection -->
+    <nav class="navbar navbar-expand-lg m-0 p-0">
+      <div class="container-fluid nav-section">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <p class="logo pt-0">nuvosa</p>
+          <img class="nav-section-image" src="images/content/nuvosa-images/nav-section/red-logo.svg" alt="logo"
+        /></a>
+        <button
+          class="navbar-toggler nav-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-evenly gap-5" id="navbarSupportedContent">
+          <ul class="navbar-nav mb-2 mb-lg-0 m-0 gap-2 gap-lg-4 align-items-center">
+            <li class="nav-item navbar-item position-relative text-center">
+              <a class="nav-link nav-links p-0" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item navbar-item position-relative text-center">
+              <a class="nav-link nav-links p-0" href="#">Projects</a>
+            </li>
+            <li class="nav-item navbar-item position-relative text-center">
+              <a class="nav-link nav-links p-0" aria-current="page" href="#">Blog</a>
+            </li>
+            <li class="nav-item navbar-item position-relative text-center">
+              <a class="nav-link nav-links p-0" aria-current="page" href="#">Pricing</a>
+            </li>
+            <li class="nav-item navbar-item position-relative text-center">
+              <a class="nav-link nav-links p-0" aria-current="page" href="#">Contact</a>
+            </li>
+          </ul>
+          <form class="d-flex align-items-center justify-content-center" role="search">
+            <a class="search-box text-center" href="#"><button class="btn search-button">Let's Talk</button></a>
+            <button class="btn nav-button" type="submit">
+              <img class="image-search" alt="button" src="images/content/nuvosa-images/nav-section/search.png" />
+            </button>
+          </form>
+        </div>
       </div>
-      <a href="https://github.com/WeAreAthlon/frontend-webpack-boilerplate" class="github-corner" title="View source on GitHub" aria-label="View source on GitHub">
-        <svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: -1px; border-top-right-radius: 5px;" aria-hidden="true">
-          <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
-          <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
-          <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
-        </svg>
-      </a>
-    </header>
-    <main>
-      <img src="images/content/header.png" alt="Webpack 5 Template Boilerplate">
-      <h1>Demo page illustrating building of SASS, PostCSS, JavaScript, Fonts, Background Images and Inline Images.</h1>
-      <img src="images/content/logoa.svg" alt="Logo of Athlon" class="logo"> 
-      <h2 id="table-of-contents">Table of Contents</h2>
-      <ul>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#requirements">Requirements</a></li>
-        <li>
-          <a href="#setup">Setup</a>
-          <ul>
-            <li><a href="#installation">Installation</a></li>
-            <li><a href="#define-package-metadata">Define Package Metadata</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#configuration">Configuration</a>
-          <ul>
-            <li><a href="#environment-configuration">Environment Configuration</a></li>
-            <li><a href="#additional-webpack-configuration">Additional webpack configuration</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#development">Development</a>
-          <ul>
-            <li><a href="#assets-source">Assets Source</a></li>
-            <li>
-              <a href="#build-assets">Build Assets</a>
-              <ul>
-                <li><a href="#one-time-build-assets-for-development">One time build assets for development</a></li>
-                <li><a href="#build-assets-and-enable-source-files-watcher">Build assets and enable source files watcher</a></li>
-                <li><a href="#start-a-development-server---reloading-automatically-after-each-file-change">Start a development server - reloading automatically after each file change.</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="#production">Production</a>
-          <ul>
-            <li><a href="#build-assets-1">Build Assets</a></li>
-            <li><a href="#get-built-assets">Get Built Assets</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#run-code-style-linters">Run Code Style Linters</a>
-          <ul>
-            <li><a href="#sass">SASS</a></li>
-            <li><a href="#javascript">JavaScript</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="#additional-tools">Additional Tools</a>
-          <ul>
-            <li><a href="#run-assets-bundle-analyzer">Run Assets Bundle Analyzer</a></li>
-            <li><a href="#continuous-integration">Continuous Integration</a></li>
-          </ul>
-        </li>
-      </ul>
-      <h2 id="features">Features</h2>
-      <ul>
-        <li><strong>0</strong> dependencies</li>
-        <li>
-          <strong>Simple setup</strong> instructions
-          <ul>
-            <li>Start development of a project right away with <strong>simple</strong>, <strong>configured</strong>, <strong>linter enabled</strong>, <strong>browser synced</strong> asset files.</li>
-          </ul>
-        </li>
-        <li>
-          Configuration per <strong>environment</strong>
-          <ul>
-            <li><code>development</code> - <a href="https://webpack.js.org/configuration/devtool/"><code>sourcemaps</code></a>, <a href="https://webpack.js.org/configuration/dev-server/"><code>browser synced developmentment server</code></a></li>
-            <li><code>production</code> - <a href="https://webpack.js.org/plugins/terser-webpack-plugin/"><code>minification</code></a>, <a href="https://webpack.js.org/configuration/devtool/"><code>sourcemaps</code></a></li>
-          </ul>
-        </li>
-        <li>Configurable <strong>browsers versions support</strong>. It uses <a href="https://github.com/browserslist/browserslist#full-list"><code>browserslist</code></a> - just specify the browsers you want to support in the <code>package.json</code> file for <code>browserslist</code>:</li>
-      </ul>
-      <pre><code class="lang-js"><span class="hljs-string">"browserslist"</span>: [
-          <span class="hljs-string">"last 2 versions"</span>,
-          <span class="hljs-string">"&gt; 5%"</span>
-      ]
-      </code></pre>
-      <ul>
-        <li>
-          The built CSS / JavaScript files will respect the <strong>configured supported browser versions</strong> using the following tools:
-          <ul>
-            <li><a href="https://github.com/postcss/autoprefixer"><code>autoprefixer</code></a> - automatically adds vendor prefixes to CSS rules</li>
-            <li><a href="https://babeljs.io/docs/en/babel-preset-env"><code>babel-preset-env</code></a> - smart preset that allows you to use the latest JavaScript without needing to micromanage which syntax transforms (<em>and optionally, browser polyfills</em>) are needed by your target environment(s).</li>
-          </ul>
-        </li>
-        <li>
-          Demo project files to be used as a reference and <strong>example demo</strong> building of:
-          <ul>
-            <li><em>JavaScript</em></li>
-            <li><em>SASS / PostCSS</em></li>
-            <li><em>HTML</em> templates</li>
-            <li><em>Images</em> (<em>CSS backgrounds and image tags</em>)</li>
-            <li><em>Videos</em></li>
-            <li><em>Fonts</em></li>
-          </ul>
-        </li>
-        <li>
-          Support for <strong>assets optimization</strong> for production environment with ability to configure:
-          <ul>
-            <li><strong>Code Minification</strong> of <em>JavaScript</em> and <em>CSS</em> processed files.</li>
-            <li><strong>Optimize Assets Loading</strong> - inline and embed <strong>images</strong> / <strong>fonts</strong> files having file size below a <em>configurable</em> threshold value.</li>
-            <li><strong>Images Optimisation</strong> - optimize <code>jpeg</code>, <code>jpg</code>, <code>png</code>, <code>gif</code>, <code>svg</code> filesize and loading type via <a href="https://github.com/imagemin/imagemin"><code>imagemin</code></a>. Plugin and Loader for webpack to optimize (<em>compress</em>) all images using <code>imagemin</code>. Do not worry about size of images, now they are always optimized/compressed.</li>
-          </ul>
-        </li>
-        <li>
-          Support for <strong>source code syntax style and formatting linters</strong> that analyze source code to flag any programming errors, bugs, stylistic errors or suspicious constructs:
-          <ul>
-            <li><strong>SASS/PostCSS syntax cheker</strong> - you can change or add additional rules in <code>.sasslintrc</code> file. Configuration options can be found on <a href="https://github.com/sasstools/sass-lint/blob/master/lib/config/sass-lint.yml"><code>sass-lint</code></a> documentation.</li>
-            <li><strong>JavaScript syntax checker</strong> - following the <code>airbnb</code> style, you can review and configure the rules in <code>.eslintrc</code> file. Configuration options can be found on <a href="https://eslint.org/docs/user-guide/configuring"><code>eslint</code></a> documentation.</li>
-          </ul>
-        </li>
-        <li>Latest <a href="https://github.com/webpack/webpack">Webpack 5</a> - <em>JavaScript</em> module bundler.</li>
-        <li>Latest <a href="https://github.com/sass/sass">SASS/PostCSS</a> compiler based on Dart <code>sass</code>.</li>
-        <li>Latest <a href="https://github.com/babel/babel">Babel 7</a> (<code>@babel/core</code>) - JavaScript compiler - <em>Use next generation JavaScript, today.</em></li>
-        <li>
-          Integration with <a href="https://github.com/features/actions">GitHub Actions</a>
-          <ul>
-            <li><a href="https://weareathlon.github.io/frontend-webpack-boilerplate/">Demo deployment available to GitHub pages</a></li>
-          </ul>
-        </li>
-        <li>Configured and ready to use <strong>Webpack Dev Server</strong> plugin for faster local development - <a href="https://webpack.js.org/configuration/dev-server/"><code>webpack-dev-server</code></a></li>
-        <li>Integration with <a href="https://www.npmjs.com/package/webpack-bundle-analyzer">Webpack Bundle Analyzer</a> - <em>Visualize size of webpack output files with an interactive zoomable treemap.</em></li>
-      </ul>
-      <h2 id="requirements">Requirements</h2>
-      <ul>
-        <li><code>node</code> : <code>&gt;=18.12.0</code></li>
-        <li><code>npm</code></li>
-      </ul>
-      <h1 id="setup">Setup</h1>
-      <h2 id="installation">Installation</h2>
-      <ol>
-        <li>Choose and download the latest template release from <a href="https://github.com/WeAreAthlon/frontend-webpack-boilerplate/releases">List of Releases</a>.</li>
-        <li>Extract the release archive to a new directory, rename it to your project name and browse the directory.</li>
-        <li>Install all dependencies using <code>npm</code> <em>clean install</em> command. </li>
-      </ol>
-      <pre><code class="lang-sh">$ <span class="hljs-built_in">npm</span> ci</code></pre>
-      <blockquote>
-        <p>More on the clean install npm command can be read here <a href="https://docs.npmjs.com/cli/ci.html"><code>npm ci</code></a></p>
-        <p>You can still use <code>npm install</code> in cases the <code>npm ci</code> raises system error due to specific platform incompatibilities.</p>
-      </blockquote>
-      <h2 id="define-package-metadata">Define Package Metadata</h2>
-      <ul>
-        <li>
-          Amend <code>package.json</code> file and optionally specify:
-          <ul>
-            <li><code>name</code> - Name of your project. A name can be optionally prefixed by a scope, e.g. <code>@myorg/mypackage</code>.</li>
-            <li><code>version</code> - Specify and maintain a version number indicator for your project code.</li>
-            <li><code>author</code> - Your organisation or just yourself. You can also specify <a href="https://docs.npmjs.com/files/package.json#people-fields-author-contributors"><code>contributors</code></a>.</li>
-            <li><code>description</code> - Short description of your project.</li>
-            <li><code>keywords</code> - Put keywords in it. It’s an array of strings.</li>
-            <li><code>repository</code> - Specify the place where your code lives.</li>
-            <li><code>license</code> - Announce your code license, figure out the license from <a href="https://choosealicense.com">Choose an Open Source License</a> .</li>
-            <li><code>browserslist</code> - Specify the supported browsers versions - you can refer to <a href="https://github.com/browserslist/browserslist#full-list">full list</a> of availalbe options.</li>
-          </ul>
-        </li>
-      </ul>
-      <h1 id="configuration">Configuration</h1>
-      <h2 id="environment-configuration">Environment Configuration</h2>
-      <ul>
-        <li>
-          Edit the <a href="configuration/environment.js"><code>configuration/environment.js</code></a> if you want to specify:
-          <ul>
-            <li><strong><code>server</code></strong>: configure development server, specify <code>host</code>, <code>port</code>. Refer to the full development server configuration options for <a href="https://webpack.js.org/configuration/dev-server/"><code>webpack-dev-server</code></a>.</li>
-            <li>
-              <strong><code>limits</code></strong>: configure file size thresholds for assets optimizations.
-              <ul>
-                <li>Image/Font files size in bytes. Below this value the image file will be served as Data URL (<em>inline base64</em>).</li>
-              </ul>
-            </li>
-            <li><strong><code>paths</code></strong>: <code>src</code> or <code>dist</code> directories names and file system location.</li>
-          </ul>
-        </li>
-      </ul>
-      <h2 id="additional-webpack-configuration">Additional <code>webpack</code> configuration</h2>
-      <p>You can additionally configure <code>webpack</code> for specific environment:</p>
-      <ul>
-        <li><code>development</code> - <a href="configuration/webpack.dev.config.js"><code>configuration/webpack.dev.config.js</code></a></li>
-        <li>
-          <code>production</code> - <a href="configuration/webpack.prod.config.js"><code>configuration/webpack.prod.config.js</code></a>
-          <ul>
-            <li>
-              Note that if you prefer to build and deploy <a href="https://webpack.js.org/configuration/devtool/#production"><code>sourcemap</code></a> files:
-              <blockquote>
-                <p>You should configure your server to disallow access to the Source Map file for normal users!</p>
-              </blockquote>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      <h1 id="development">Development</h1>
-      <h2 id="assets-source">Assets Source</h2>
-      <ul>
-        <li><strong>SASS/PostCSS</strong> files are located under <code>src/scss/</code></li>
-        <li><strong>JavaScript</strong> files with support of latest ECMAScript <em>ES6 / ECMAScript 2016(ES7)/ etc</em> files are located under <code>src/js/</code></li>
-        <li><strong>Image</strong> files are located under <code>src/images/</code></li>
-        <li><strong>Font</strong> files are located under <code>src/fonts/</code></li>
-        <li>
-          <strong>HTML</strong> files are located under <code>src/</code>
-          <ul>
-            <li>It will <strong>automatically</strong> build <strong>all HTML files</strong> placed under <code>src/</code> directory, no need to manually configure each template anymore!</li>
-          </ul>
-        </li>
-      </ul>
-      <h2 id="build-assets">Build Assets</h2>
-      <h3 id="one-time-build-assets-for-development">One time build assets for development</h3>
-      <pre><code class="lang-sh">$ npm <span class="hljs-keyword">run</span><span class="bash"> build</span>
-      </code></pre>
-      <h3 id="build-assets-and-enable-source-files-watcher">Build assets and enable source files watcher</h3>
-      <pre><code class="lang-sh">$ npm <span class="hljs-keyword">run</span><span class="bash"> watch</span>
-      </code></pre>
-      <p>This command is suitable if you develop with external web server.</p>
-      <blockquote>
-        <p><strong>Note:</strong> File watching does not work with <em>NFS</em> (<em>Windows</em>) and virtual machines under <em>VirtualBox</em>. Extend the configuration in such cases by:</p>
-      </blockquote>
-      <pre><code class="lang-js">module.exports = {
-        <span class="hljs-comment">//...</span>
-      <span class="hljs-symbol">  watchOptions:</span> {
-      <span class="hljs-symbol">    poll:</span> <span class="hljs-number">1000</span> <span class="hljs-comment">// Check for changes every second</span>
-        }
-      };
-      </code></pre>
-      <h3 id="start-a-development-server-reloading-automatically-after-each-file-change-">Start a development server - reloading automatically after each file change.</h3>
-      <pre><code class="lang-sh">$ npm <span class="hljs-keyword">run</span><span class="bash"> dev</span>
-      </code></pre>
-      <h1 id="production">Production</h1>
-      <h2 id="build-assets-1">Assets Building</h2>
-      <p>Optimize assets for production by:</p>
-      <pre><code class="lang-sh">$ npm <span class="hljs-keyword">run</span><span class="bash"> production</span>
-      </code></pre>
-      <h2 id="get-built-assets">Get Built Assets</h2>
-      <ul>
-        <li><em>CSS</em> files are located under <code>/dist/css/</code></li>
-        <li><em>JavaScript</em> files with support of <em>ES6 / ECMAScript 2016(ES7)</em> files are located under <code>/dist/js/</code></li>
-        <li>
-          <em>Images</em> are located under <code>/dist/images/</code>
-          <ul>
-            <li>Images part of the <em>design</em> (<em>usually referenced in the CSS</em>) are located under <code>/dist/images/design/</code></li>
-            <li>Images part of the <em>content</em> (<em>usually referenced via <code>&lt;img&gt;</code> tags</em>) are located under <code>/dist/images/content/</code></li>
-          </ul>
-        </li>
-        <li><em>Fonts</em> are located under <code>/dist/fonts/</code></li>
-        <li><em>HTML</em> files are located under <code>/dist/</code></li>
-      </ul>
-      <h1 id="run-code-style-linters">Run Code Style Linters</h1>
-      <h2 id="sass">SASS</h2>
-      <pre><code class="lang-sh">$ npm <span class="hljs-keyword">run</span><span class="bash"> lint:sass</span></code></pre>
-      <h2 id="javascript">JavaScript</h2>
-      <pre><code class="lang-sh">$ npm <span class="hljs-keyword">run</span><span class="bash"> lint:js</span></code></pre>
-      <h1 id="additional-tools">Additional Tools</h1>
-      <h2 id="run-assets-bundle-analyzer">Run Assets Bundle Analyzer</h2>
-      <pre><code class="lang-sh">$ npm <span class="hljs-keyword">run</span><span class="bash"> stats</span></code></pre>
-      <blockquote>
-        <p>This will open the visualisaion on the default configuraiton URL <code>localhost:8888</code>, you can change this URL or port following the <a href="https://github.com/webpack-contrib/webpack-bundle-analyzer#options-for-cli">package</a> documentation.</p>
-      </blockquote>
-      <h2 id="continuous-integration">Continuous Integration</h2>
-      <p>This boilerplate template contains integration with <a href="https://github.com/features/actions/">GitHub Actions</a>. The build system runs all linting scripts and deploys production optimized pages to <em>GitHub</em> pages upon push to the <code>master</code> branch. However, note that this deployment flow only works for <em>Project Pages</em>, as User and Organization pages <a href="https://help.github.com/articles/user-organization-and-project-pages/">only support the master branch flow</a>.</p>
-      <p>For more information on how to set up alternative deployment processes, check out the <a href="https://docs.github.com/en/actions/deployment/about-deployments/deploying-with-github-actions">GitHub Actions documentation on deployment</a>. The service can deploy to dozens of cloud providers, including Heroku, AWS, and Firebase.</p>
-      <h2 id="video-files">Video File Preview</h2>
-      <video width="1024" height="576" controls>
-        <source src="videos/video.webm" type="video/webm">
-        Your browser does not support the video tag.
-      </video>
-    </main>
-    <footer>
-      <address>Documentation avaialable on the official <a href="https://github.com/WeAreAthlon/frontend-webpack-boilerplate/" target="_blank" rel="noopener">GitHub Repository</a>.</address>
-      <address>Maintained by <a href="https://www.weareathlon.com/" target="_blank" rel="noopener">WeAreAthlon</a>.</address>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="d-md-flex flex-md-row-reverse hero-section-wrapper position-relative">
+        <div class="hero-section-image position-relative">
+          <img class="img-fluid" src="./images/content/nuvosa-images/hero-section/girl.png" alt="girl" />
+          <div class="wrapper-creative-container position-relative justify-content-center">
+            <div class="position-relative">
+              <p class="text-center hero-wrapper-heading">Our Creative Team</p>
+              <div class="wrapper-pictures position-relative d-flex justify-content-center">
+                <img
+                  class="student position-absolute"
+                  alt="student"
+                  src="./images/content/nuvosa-images/hero-section/student.png"
+                />
+                <img
+                  class="professor position-absolute"
+                  src="./images/content/nuvosa-images/hero-section/professor.png"
+                  alt="professor"
+                />
+                <img
+                  class="mentor position-absolute"
+                  alt="mentor"
+                  src="./images/content/nuvosa-images/hero-section/mentor.png"
+                />
+                <img
+                  class="host position-absolute"
+                  alt="host"
+                  src="./images/content/nuvosa-images/hero-section/host.png"
+                />
+                <a href="#"
+                  ><img
+                    class="add-person position-absolute"
+                    alt="add-image"
+                    src="./images/content/nuvosa-images/hero-section/add-person.png"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-section-content">
+          <h1 class="hero-section-content-heading position-relative">
+            Increase your web traffic with our
+            <img class="expert-image position-absolute" src="./images/content/nuvosa-images/hero-section/expert.png" />
+          </h1>
+          <p class="hero-section-para">
+            It is a long established fact that a reader will be distracted by the readable content of a page when It is
+            a long .It is a long established fact that a reader will be distracted by the readable content of a is
+            simply. It is a long established fact that a reader will be distracted.
+          </p>
+          <div
+            class="d-flex flex-column justify-content-center align-items-center flex-md-row justify-content-md-start hero-section-buttons"
+          >
+            <a class="get-started-button" href="#"><button class="btn hero-button">Get Started</button></a>
+            <a href="#"
+              ><img
+                class="youtube-video-link"
+                src="images/content/nuvosa-images/hero-section/youtube.png"
+                alt="youtube-tour"
+            /></a>
+          </div>
+        </div>
+        <img
+          class="position-absolute design-circle"
+          src="./images/content/nuvosa-images/hero-section/big-circle.png"
+          alt="circle"
+        />
+        <img
+          class="position-absolute design-small-circle"
+          src="./images/content/nuvosa-images/hero-section/small-circle.png"
+          alt="circle"
+        />
+        <img
+          class="position-absolute design-green"
+          src="./images/content/nuvosa-images/hero-section/green-shape.png"
+          alt="green"
+        />
+      </div>
+    </section>
+
+    <!-- Services section -->
+    <section
+      class="services-section align-items-center d-flex flex-wrap justify-content-center justify-content-lg-around"
+    >
+      <div class="card service-box position-relative">
+        <div class="d-flex align-items-center pb-4 gap-4">
+          <img
+            class="card-img-top service-box-image"
+            src="./images/content/nuvosa-images/services-section/social-media.png"
+            alt="Card image cap"
+          />
+          <h5 class="card-title service-box-heading">Social Media Management</h5>
+        </div>
+        <p class="service-box-para">
+          It is a long established fact that a reader will be distracted by the readable content .It is a long
+          established fact that .
+        </p>
+        <a href="#"
+          ><img class="position-absolute arrow-image" src="./images/content/nuvosa-images/services-section/arrow.png"
+        /></a>
+      </div>
+      <div class="card service-box">
+        <div class="d-flex align-items-center pb-4 gap-4">
+          <img
+            class="card-img-top service-box-image"
+            src="./images/content/nuvosa-images/services-section/email.png"
+            alt="Card image cap"
+          />
+          <h5 class="card-title service-box-heading">Email Marketing</h5>
+        </div>
+        <p class="service-box-para">
+          It is a long established fact that a reader will be distracted by the readable content .It is a long
+          established fact that .
+        </p>
+        <a href="#"
+          ><img class="position-absolute arrow-image" src="./images/content/nuvosa-images/services-section/arrow.png"
+        /></a>
+      </div>
+      <div class="card service-box">
+        <div class="d-flex align-items-center pb-4 gap-4">
+          <img
+            class="card-img-top service-box-image"
+            src="./images/content/nuvosa-images/services-section/seo.png"
+            alt="Card image cap"
+          />
+          <h5 class="card-title service-box-heading">SEO Management</h5>
+        </div>
+        <p class="service-box-para">
+          It is a long established fact that a reader will be distracted by the readable content .It is a long
+          established fact that .
+        </p>
+        <a href="#"
+          ><img class="position-absolute arrow-image" src="./images/content/nuvosa-images/services-section/arrow.png"
+        /></a>
+      </div>
+    </section>
+
+    <!-- Optimising section -->
+    <section class="optimizing-section position-relative">
+      <h2>Optimising Your <span class="website">Website</span></h2>
+      <p>
+        It is a long established fact that a reader will be distracted by the readable content of a page when It is a
+        long .
+      </p>
+      <div class="optimising-boxes align-items-center d-flex flex-wrap justify-content-center">
+        <div class="card optimising-box position-relative">
+          <img
+            class="card-img-top optimising-box-image"
+            src="./images/content/nuvosa-images/optimising-section/keyword.svg"
+            alt="keyword"
+          />
+          <h4 class="optimising-box-heading">Keyword Research</h4>
+          <p class="optimising-box-para">
+            It is a long established fact that a reader will be distracted by the It is a long established .
+          </p>
+          <img
+            class="number-image image-one position-absolute"
+            src="./images/content/nuvosa-images/optimising-section/one.png"
+            alt="one"
+          />
+        </div>
+        <div class="card optimising-box position-relative">
+          <img
+            class="card-img-top optimising-box-image"
+            src="./images/content/nuvosa-images/optimising-section/content.svg"
+            alt="content"
+          />
+          <h4 class="optimising-box-heading">content Optimisation</h4>
+          <p class="optimising-box-para">
+            It is a long established fact that a reader will be distracted by the It is a long established .
+          </p>
+          <img
+            class="number-image position-absolute"
+            src="./images/content/nuvosa-images/optimising-section/two.png"
+            alt="two"
+          />
+        </div>
+        <div class="card optimising-box position-relative">
+          <img
+            class="card-img-top optimising-box-image"
+            src="./images/content/nuvosa-images/optimising-section/target.svg"
+            alt="target"
+          />
+          <h4 class="optimising-box-heading">Target Analysis</h4>
+          <p class="optimising-box-para">
+            It is a long established fact that a reader will be distracted by the It is a long established .
+          </p>
+          <img
+            class="number-image position-absolute"
+            src="./images/content/nuvosa-images/optimising-section/three.png"
+            alt="three"
+          />
+        </div>
+        <div class="card optimising-box">
+          <img
+            class="card-img-top optimising-box-image"
+            src="./images/content/nuvosa-images/optimising-section/testing.svg"
+            alt="testing"
+          />
+          <h4 class="optimising-box-heading">Continuous Testing</h4>
+          <p class="optimising-box-para">
+            It is a long established fact that a reader will be distracted by the It is a long established .
+          </p>
+          <img
+            class="number-image position-absolute"
+            src="./images/content/nuvosa-images/optimising-section/four.png"
+            alt="four"
+          />
+        </div>
+      </div>
+      <img
+        class="position-absolute"
+        src="./images/content/nuvosa-images/optimising-section/design-circle.svg"
+        alt="design-circle"
+      />
+    </section>
+
+    <!-- Advertisement Wrapper -->
+    <section class="advertisement-wrapper d-flex flex-column row-gap-4 flex-md-row-reverse align-items-center">
+      <div>
+        <img class="mx-auto" src="./images/content/nuvosa-images/advertisement-wrapper/laptop.png" />
+      </div>
+      <div class="card">
+        <h5 class="card-title">Perfect Solution For Your <span>Business</span></h5>
+        <p class="card-text">
+          It is a long established fact that a reader will be distracted by the It is a long established .t is a long
+          established fact that a reader will be distracted by the readable content of .
+        </p>
+        <a href="#" class="btn btn-primary">Learn More</a>
+      </div>
+    </section>
+
+    <!-- Goal Section -->
+    <section class="goal d-flex flex-column flex-sm-row flex-sm-wrap">
+      <div class="card-block goal-box position-relative">
+        <img src="./images/content/nuvosa-images/goal-section/grow.svg" alt="grow-image" />
+        <h4 class="card-title">Grow Your Business</h4>
+        <p class="card-text">It is a long established fact that a reader will be distracted by.</p>
+        <a href="#">Read More...</a>
+        <img
+          class="goal-orange-design position-absolute"
+          src="./images/content/nuvosa-images/goal-section/orange-design.svg"
+        />
+        <img class="purple position-absolute" src="./images/content/nuvosa-images/goal-section/purple-design.svg" />
+      </div>
+      <div class="card-block goal-box">
+        <img src="./images/content/nuvosa-images/goal-section/quality.svg" alt="goal-image" />
+        <h4 class="card-title">Get Quality leads</h4>
+        <p class="card-text">It is a long established fact that a reader will be distracted by.</p>
+        <a href="#">Read More...</a>
+      </div>
+      <div class="card-block goal-box position-relative">
+        <img src="./images/content/nuvosa-images/goal-section/sales.svg" alt="sales-image" />
+        <h4 class="card-title">Drive more sales</h4>
+        <p class="card-text">It is a long established fact that a reader will be distracted by.</p>
+        <a href="#">Read More...</a>
+        <img
+          class="goal-design-purple position-absolute"
+          src="./images/content/nuvosa-images/goal-section/purple-design.svg"
+        />
+      </div>
+    </section>
+
+    <!-- Choose-us section -->
+    <section class="choose-us">
+      <h2>Why You Should <span>Choose Us.</span></h2>
+      <p class="m-0">
+        It is a long established fact that a reader will be distracted by the readable content .It is a long established
+        fact that a reader .It is a long established fact that a reader will be .
+      </p>
+      <div class="d-flex flex-column flex-md-row flex-sm-wrap choose-us-boxes">
+        <div class="card-block choose-us-box text-center">
+          <img src="./images/content/nuvosa-images/choose-us-section/optimazadion.svg" alt="optimazadion" />
+          <h4 class="card-title">See optimazadion</h4>
+          <p class="card-text">
+            It is a long established fact that a reader will be distracted by.It is a long established.
+          </p>
+          <a href="#" class="btn btn-primary choose-us-button">Learn More</a>
+        </div>
+        <div class="card-block choose-us-box text-center">
+          <img src="./images/content/nuvosa-images/choose-us-section/keyword.svg" alt="keyword" />
+          <h4 class="card-title">Keyword research</h4>
+          <p class="card-text">
+            It is a long established fact that a reader will be distracted by.It is a long established.
+          </p>
+          <a href="#" class="btn btn-primary choose-us-button">Learn More</a>
+        </div>
+        <div class="card-block choose-us-box text-center">
+          <img
+            class="marketing-image"
+            src="./images/content/nuvosa-images/choose-us-section/marketing.svg"
+            alt="marketing"
+          />
+          <h4 class="card-title">Social marketing</h4>
+          <p class="card-text">
+            It is a long established fact that a reader will be distracted by.It is a long established.
+          </p>
+          <a href="#" class="btn btn-primary choose-us-button">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Need-it section -->
+    <section class="need-it d-md-flex flex-md-column-reverse flex-xl-row-reverse align-items-center">
+      <div>
+        <h3>You Make Ask What</h3>
+        <h3>SEO & Why Do You <span>Need It?</span></h3>
+        <p>
+          It is a long established fact that a reader will be distracted by the readable content .It is a long
+          established fact that a reader .It is a long.
+        </p>
+        <div class="need-it-cards d-flex flex-column flex-md-row flex-wrap justify-content-center flex-xxl-column">
+          <div class="d-flex flex-column flex-xl-row need-it-card ps-xxl-0">
+            <img src="./images/content/nuvosa-images/need-it-section/web.svg" alt="web" />
+            <div class="need-it-card-content">
+              <h5>Social media marketing</h5>
+              <p>It is a long established fact that a reader will be distracted by the.</p>
+            </div>
+          </div>
+          <div class="d-flex flex-column flex-xl-row need-it-card ps-xxl-0">
+            <img src="./images/content/nuvosa-images/need-it-section/email.svg" alt="email" />
+            <div class="need-it-card-content">
+              <h5>Email marketing</h5>
+              <p>It is a long established fact that a reader will be distracted by the.</p>
+            </div>
+          </div>
+          <div class="d-flex flex-column flex-xl-row need-it-card ps-xxl-0">
+            <img src="./images/content/nuvosa-images/need-it-section/seo.svg" alt="seo" />
+            <div class="need-it-card-content">
+              <h5>SEO optimization</h5>
+              <p>It is a long established fact that a reader will be distracted by the.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="position-relative">
+        <img src="./images/content/nuvosa-images/need-it-section/files.png" alt="files" />
+        <img class="need-it-green position-absolute" src="./images/content/nuvosa-images/need-it-section/green.svg" />
+        <img class="need-it-red position-absolute" src="./images/content/nuvosa-images/need-it-section/red.svg" />
+      </div>
+    </section>
+
+    <!-- Number-section -->
+    <section class="number">
+      <div class="d-flex flex-column flex-md-row justify-content-center align-items-center">
+        <div class="d-flex flex-column align-items-center">
+          <h3>86</h3>
+          <p class="mb-0">Happy Clients</p>
+        </div>
+        <img src="./images/content/nuvosa-images/number-section/red.svg" alt="red-circle" />
+        <div class="d-flex flex-column align-items-center">
+          <h3>118</h3>
+          <p class="mb-0">Project Done</p>
+        </div>
+        <img src="./images/content/nuvosa-images/number-section/green.svg" alt="green-circle" />
+        <div class="d-flex flex-column align-items-center">
+          <h3>6+</h3>
+          <p class="mb-0">Years Of Experience</p>
+        </div>
+        <img src="./images/content/nuvosa-images/number-section/yellow.svg" alt="yellow-circle" />
+        <div class="d-flex flex-column align-items-center">
+          <h3>14</h3>
+          <p class="mb-0">National Awards</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Speed Section -->
+    <section class="speed-section d-sm-flex flex-row-reverse justify-content-between">
+      <div class="position-relative">
+        <img src="./images/content/nuvosa-images/speed-section/statistics.png" />
+        <img class="position-absolute speed-green" src="./images/content/nuvosa-images/speed-section/green.svg" />
+        <img
+          class="position-absolute speed-purple"
+          src="./images/content/nuvosa-images/speed-section/speed-purple.svg"
+        />
+        <img
+          class="position-absolute speed-orange"
+          src="./images/content/nuvosa-images/speed-section/speed-orange.jpg"
+        />
+      </div>
+      <div class="align-self-center">
+        <h3>Check Your Website <span>Speed</span></h3>
+        <p>
+          It is a long established fact that a reader will be distracted by the readable content .It is a long
+          established fact that a reader .It is a long.
+        </p>
+        <form>
+          <div class="d-flex flex-column justify-content-start align-items-center flex-lg-row">
+            <input type="text" placeholder="Web URL" />
+            <input type="email" placeholder="Email Address" />
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section class="plans-section position-relative">
+      <h3 class="text-center">Our Plans</h3>
+      <p class="text-center">Choose the right SEO for you</p>
+      <div
+        class="plan-section-cards d-flex flex-column flex-lg-row flex-wrap justify-content-center align-items-center"
+      >
+        <div class="card text-center plan-section-card">
+          <h6>Plus</h6>
+          <p class="price"><sup>$</sup>46<sub>/Month</sub></p>
+          <div>
+            <p>408GB Bandwidth</p>
+            <p>Business & Finance Analyzing</p>
+            <p>24 Hour Support</p>
+            <p>Customer Management</p>
+          </div>
+          <a href="#" class="btn plan-button">Get Started</a>
+        </div>
+
+        <div class="card text-center plan-section-card">
+          <h6>Beginner</h6>
+          <p><sup>$</sup>66<sub>/Month</sub></p>
+          <div>
+            <p>408GB Bandwidth</p>
+            <p>Business & Finance Analyzing</p>
+            <p>24 Hour Support</p>
+            <p>Customer Management</p>
+          </div>
+          <a href="#" class="btn plan-button">Get Started</a>
+        </div>
+
+        <div class="card text-center plan-section-card">
+          <h6>Advanced</h6>
+          <p><sup>$</sup>86<sub>/Month</sub></p>
+          <div>
+            <p>408GB Bandwidth</p>
+            <p>Business & Finance Analyzing</p>
+            <p>24 Hour Support</p>
+            <p>Customer Management</p>
+          </div>
+          <a href="#" class="btn plan-button">Get Started</a>
+        </div>
+      </div>
+      <img
+        class="orange-design position-absolute"
+        src="./images/content/nuvosa-images/plans-section/circle-orange.png"
+        alt="shapes"
+      />
+      <img
+        class="purple-design position-absolute"
+        src="./images/content/nuvosa-images/plans-section/purple.png"
+        alt="shapes"
+      />
+    </section>
+
+    <!-- Expert Teams Section -->
+    <section class="expert-teams">
+      <h3 class="text-center">Our Expert Team <span>Members</span></h3>
+      <p class="text-center mb-0">
+        It is a long established fact that a reader will be distracted by the readable content.It is a long established
+        fact that a reader
+      </p>
+      <div class="team-members d-flex flex-wrap justify-content-center position-relative">
+        <div class="card team-member-card d-flex flex-column align-items-center">
+          <img class="team-member" src="./images/content/nuvosa-images/expert-section/whee.png" alt="Muriel Whee" />
+          <h5 class="mb-0">Muriel Whee</h5>
+          <p class="mb-0 text-center">Marketing Manager</p>
+          <div class="d-flex icons">
+            <a href="#"
+              ><img class="expert-icon" src="./images/content/nuvosa-images/expert-section/mail.svg" alt="mail"
+            /></a>
+            <a href="#"
+              ><img
+                class="expert-icon"
+                src="./images/content/nuvosa-images/expert-section/instagram.svg"
+                alt="instagram"
+            /></a>
+            <a href="#"
+              ><img class="expert-icon" src="./images/content/nuvosa-images/expert-section/twitter.svg" alt="twitter"
+            /></a>
+            <a href="#"
+              ><img class="expert-icon" src="./images/content/nuvosa-images/expert-section/facebook.svg" alt="facebook"
+            /></a>
+          </div>
+        </div>
+        <div class="card team-member-card d-flex flex-column align-items-center">
+          <img class="team-member" src="./images/content/nuvosa-images/expert-section/doe.png" alt="John Doe" />
+          <h5 class="mb-0">John Doe</h5>
+          <p class="mb-0 text-center">Marketing Manager</p>
+          <div class="d-flex icons">
+            <a href="#"
+              ><img class="expert-icon" src="./images/content/nuvosa-images/expert-section/mail.svg" alt="mail"
+            /></a>
+            <a href="#"
+              ><img
+                class="expert-icon"
+                src="./images/content/nuvosa-images/expert-section/instagram.svg"
+                alt="instagram"
+            /></a>
+            <a href="#"
+              ><img class="expert-icon" src="./images/content/nuvosa-images/expert-section/twitter.svg" alt="twitter"
+            /></a>
+            <a href="#"
+              ><img class="expert-icon" src="./images/content/nuvosa-images/expert-section/facebook.svg" alt="facebook"
+            /></a>
+          </div>
+        </div>
+        <div class="card team-member-card d-flex flex-column align-items-center">
+          <img class="team-member" src="./images/content/nuvosa-images/expert-section/porter.png" alt="Clay Porter" />
+          <h5 class="mb-0">Clay Porter</h5>
+          <p class="mb-0 text-center">Marketing Manager</p>
+          <div class="d-flex icons">
+            <a href="#"
+              ><img class="expert-icon" src="./images/content/nuvosa-images/expert-section/mail.svg" alt="mail"
+            /></a>
+            <a href="#"
+              ><img
+                class="expert-icon"
+                src="./images/content/nuvosa-images/expert-section/instagram.svg"
+                alt="instagram"
+            /></a>
+            <a href="#"
+              ><img class="expert-icon" src="./images/content/nuvosa-images/expert-section/twitter.svg" alt="twitter"
+            /></a>
+            <a href="#"
+              ><img class="expert-icon" src="./images/content/nuvosa-images/expert-section/facebook.svg" alt="facebook"
+            /></a>
+          </div>
+        </div>
+        <div class="card team-member-card d-flex flex-column align-items-center">
+          <img class="team-member" src="./images/content/nuvosa-images/expert-section/norm.png" alt="Doug Norm" />
+          <h5 class="mb-0">Doug Norm</h5>
+          <p class="mb-0 text-center">Marketing Manager</p>
+          <div class="d-flex icons">
+            <a href="#"
+              ><img class="expert-icon" src="./images/content/nuvosa-images/expert-section/mail.svg" alt="mail"
+            /></a>
+            <a href="#"
+              ><img
+                class="expert-icon"
+                src="./images/content/nuvosa-images/expert-section/instagram.svg"
+                alt="instagram"
+            /></a>
+            <a href="#"
+              ><img class="expert-icon" src="./images/content/nuvosa-images/expert-section/twitter.svg" alt="twitter"
+            /></a>
+            <a href="#"
+              ><img class="expert-icon" src="./images/content/nuvosa-images/expert-section/facebook.svg" alt="facebook"
+            /></a>
+          </div>
+        </div>
+        <img
+          class="position-absolute expert-design-purple"
+          src="./images/content/nuvosa-images/expert-section/purple.png"
+          alt="shapes"
+        />
+        <img
+          class="position-absolute expert-design-green"
+          src="./images/content/nuvosa-images/expert-section/green.png"
+          alt="shapes"
+        />
+      </div>
+    </section>
+
+    <!-- Clients-section -->
+    <section class="clients-section">
+      <h3 class="text-center">Our Clients Say</h3>
+      <p class="text-center mb-0 position-relative">
+        It is a long established fact that a reader will be distracted by the readable content.It is a
+        <img
+          class="position-absolute clients-orange-design"
+          src="./images/content/nuvosa-images/clients-section/orange-design-client.svg"
+          alt="orange-design"
+        />
+      </p>
+      <div class="owl-carousel owl-theme mx-auto">
+        <div class="item">
+          <div class="card position-relative client-card d-flex flex-column align-items-center">
+            <p class="text-center">
+              It is a long established fact that a reader will be distracted by the readable content .It is a long
+              established fact that a reader
+            </p>
+            <img class="client-image" src="./images/content/nuvosa-images/clients-section/client-one.png" />
+            <h5 class="m-0">Clay Porter</h5>
+            <h6>Ship builder</h6>
+            <img class="position-absolute quote" src="./images/content/nuvosa-images/clients-section/qoute.png" />
+          </div>
+        </div>
+        <div class="item">
+          <div class="card position-relative client-card d-flex flex-column align-items-center">
+            <p class="text-center">
+              It is a long established fact that a reader will be distracted by the readable content .It is a long
+              established fact that a reader
+            </p>
+            <img class="client-image" src="./images/content/nuvosa-images/clients-section/client-two.png" />
+            <h5 class="m-0">Clay Porter</h5>
+            <h6>Ship builder</h6>
+            <img class="position-absolute quote" src="./images/content/nuvosa-images/clients-section/qoute.png" />
+          </div>
+        </div>
+        <div class="item">
+          <div class="card position-relative client-card d-flex flex-column align-items-center">
+            <p class="text-center">
+              It is a long established fact that a reader will be distracted by the readable content .It is a long
+              established fact that a reader
+            </p>
+            <img class="client-image" src="./images/content/nuvosa-images/clients-section/client-three.png" />
+            <h5 class="m-0">Clay Porter</h5>
+            <h6>Ship builder</h6>
+            <img class="position-absolute quote" src="./images/content/nuvosa-images/clients-section/qoute.png" />
+          </div>
+        </div>
+        <div class="item">
+          <div class="card position-relative client-card d-flex flex-column align-items-center">
+            <p class="text-center">
+              It is a long established fact that a reader will be distracted by the readable content .It is a long
+              established fact that a reader
+            </p>
+            <img class="client-image" src="./images/content/nuvosa-images/clients-section/client-four.png" />
+            <h5 class="m-0">Clay Porter</h5>
+            <h6>Ship builder</h6>
+            <img class="position-absolute quote" src="./images/content/nuvosa-images/clients-section/qoute.png" />
+          </div>
+        </div>
+      </div>
+      <!--Jquery -->
+    </section>
+    <!-- Subscription Section -->
+    <section class="subscription-section text-center">
+      <h3>Subscribe & Find The Perfect Cosmetics</h3>
+      <p>Enter Your Email And Get Updated New Products & News</p>
+      <form>
+        <div class="subscription-form d-flex flex-column flex-md-row justify-content-center align-items-center">
+          <input type="text" class="form-control d-inline-block w-25" placeholder="Name" />
+          <input type="email" class="form-control d-inline-block w-50" placeholder="Email Address" />
+          <button class="btn btn-primary">Subscribe</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+      <a class="text-decoration-none d-flex align-items-center justify-content-center" href="#">
+        <p class="footer-logo mb-0">nuvosa</p>
+        <img src="images/content/nuvosa-images/footer-section/red-logo.svg" alt="logo"
+      /></a>
+      <div class="footer-links">
+        <ul class="footer-list-items ps-0 d-flex flex-column flex-md-row justify-content-center">
+          <a class="text-decoration-none" href="#"><li>Overview</li></a>
+          <a class="text-decoration-none" href="#"><li>Pricing</li></a>
+          <a class="text-decoration-none" href="#"><li>Careers</li></a>
+          <a class="text-decoration-none" href="#"><li>Help</li></a>
+          <a class="text-decoration-none" href="#"><li>Privacy</li></a>
+        </ul>
+      </div>
+      <hr />
+      <div class="footer-section-text d-flex flex-column flex-md-row-reverse">
+        <div>
+          <a href="#" class="text-decoration-none">Terms of Use</a>
+          <a href="#" class="text-decoration-none">Copyright & Trademark</a>
+          <a href="#" class="text-decoration-none">Policy</a>
+        </div>
+        <p class="footer-section-copyright">Copyright © 2023 nuvosa, All rights reserved.</p>
+      </div>
     </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- custom JS code after importing jquery and owl -->
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.owl-carousel').owlCarousel();
+      });
+
+      $('.owl-carousel').owlCarousel({
+        loop: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          350: {
+            items: 1.1,
+          },
+          700: {
+            items: 2.5,
+          },
+          1024: {
+            items: 1.75,
+          },
+          1440: {
+            items: 2.5,
+          },
+          1920: {
+            items: 2.79,
+          },
+        },
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,126 @@
+//need-it section
+.need-it {
+  padding-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  @media screen and (min-width: 1440px) {
+    padding-top: 114px;
+    padding-left: 131px;
+    padding-right: 131px;
+    justify-content: space-between;
+  }
+  > div {
+    h3 {
+      text-align: center;
+      font-size: 22px;
+      @media screen and (min-width: 768px) {
+        font-size: 28px;
+      }
+      span {
+        color: rgba(111, 119, 241, 1);
+      }
+      @media screen and (min-width: 1920px) {
+        text-align: left;
+        font-size: 55px;
+      }
+    }
+    > p {
+      padding-top: 20px;
+      color: rgba(130, 130, 130, 1);
+      width: 300px;
+      margin: auto;
+      @media screen and (min-width: 768px) {
+        width: 600px;
+        padding-bottom: 57px;
+      }
+      @media screen and (min-width: 1440px) {
+        padding-top: 36px;
+      }
+      @media screen and (min-width: 1920px) {
+        width: 693px;
+        text-align: left;
+        margin: unset;
+      }
+    }
+    > img {
+      @media screen and (min-width: 768px) {
+        width: 350px;
+      }
+      @media screen and (min-width: 1440px) {
+        width: 600px;
+      }
+      @media screen and (min-width: 1920px) {
+        width: 771px;
+      }
+    }
+  }
+}
+
+.need-it-cards {
+  row-gap: 20px;
+  align-items: center;
+  padding-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    row-gap: 59px;
+    column-gap: 30px;
+  }
+
+  div {
+    img {
+      width: 60px;
+      @media screen and (min-width: 1440px) {
+        width: 101px;
+        margin-right: 12px;
+      }
+    }
+    p {
+      color: rgba(130, 130, 130, 1);
+    }
+  }
+}
+.need-it-card {
+  row-gap: 10px;
+  align-items: center;
+  width: 300px;
+  z-index: 1;
+  @media screen and (min-width: 1440px) {
+    width: 638px;
+    align-items: left;
+    padding-left: 43px;
+    p {
+      width: 419px;
+      text-align: left;
+    }
+    h5 {
+      text-align: left;
+    }
+  }
+}
+
+.need-it-card-content {
+  text-align: center;
+}
+
+.need-it-card:hover {
+  box-shadow: 5px 25px 37px 0px rgba(2, 22, 5, 0.06);
+  scale: 1.05;
+  transition: all 0.2s ease-in-out 0.2s;
+}
+.need-it-green {
+  display: none;
+  @media screen and (min-width: 1440px) {
+  display: inline;
+  width:28.22px !important;
+  top:-30px;
+  left:-59px;
+  }
+}
+.need-it-red {
+  display: none;
+  @media screen and (min-width: 1920px) {
+  display: inline;
+  width:15px !important;
+  bottom:-29px;
+  left:571px;
+  }
+}

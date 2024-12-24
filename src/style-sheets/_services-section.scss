@@ -1,0 +1,76 @@
+//Services Section
+.services-section {
+  margin-top: 45px !important;
+  margin: auto;
+  column-gap: 28px;
+  row-gap: 24px;
+
+  @media screen and (min-width: 1920px) {
+    padding-left: 121px;
+    padding-right: 128px;
+    justify-content: space-between;
+  }
+}
+
+.service-box {
+  padding: 27px 18px 0px 25px;
+  border: none !important;
+  background-color: transparent;
+  box-shadow: 0px 17px 33px -14px rgba(2, 22, 5, 0.07);
+  width: 300px;
+
+  @media screen and (min-width: 1920px) {
+    width: 513px;
+  }
+}
+
+.service-box-image {
+  width: 45px !important;
+
+  @media screen and (min-width: 1920px) {
+    width: 133px !important;
+  }
+}
+
+.service-box-heading {
+  font-size: 24px;
+  font-weight: 400;
+
+  @media screen and (min-width: 1920px) {
+    font-size: 40px;
+  }
+}
+
+.arrow-image {
+  right: 20px;
+  bottom: 24px;
+
+  @media screen and (min-width: 768px) {
+    bottom: 12px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    bottom: 12px;
+  }
+}
+
+.service-box-para {
+  color: #828282;
+  padding-bottom: 21px;
+  font-size: 17px;
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 21px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    width: 378px;
+    padding-bottom: 71px;
+  }
+}
+
+.service-box:hover {
+  cursor: pointer;
+  scale: 1.05;
+  transition: all 0.2s ease-in-out 0.2s;
+}
